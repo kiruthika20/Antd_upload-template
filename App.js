@@ -29,13 +29,13 @@ const [isModalVisible, setIsModalVisible] = useState(false)
 
 
 	return(
-   <div>
-  <br></br>
-  <div class="inpt">
-  <input  type="file" name="file" onChange={onSelectingfile} />
+    <div>
+      <br></br>
+      <div class="inpt">
+      <input  type="file" name="file" onChange={onSelectingfile} />
   
   
-				<Button onClick={showModal}>Submit</Button>
+			<Button onClick={showModal}>Submit</Button>
 			
 		
 			{isSelected ? (
@@ -48,10 +48,12 @@ const [isModalVisible, setIsModalVisible] = useState(false)
         <Modal title="Error Message " visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
 				<p>Please choose the file to upload !!!</p>
         </Modal>
-			)}
+			   )
+      }
       </div>
 		</div>
 	)
 }
 
 export default App;
+
