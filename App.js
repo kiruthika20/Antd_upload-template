@@ -28,30 +28,27 @@ const [isModalVisible, setIsModalVisible] = useState(false)
 
 
 
-	return(
+return(
     <div>
       <br></br>
-      <div class="inpt">
+     <div class="inpt">
       <input  type="file" name="file" onChange={onSelectingfile} />
-  
-  
-			<Button onClick={showModal}>Submit</Button>
+     <Button onClick={showModal}>Submit</Button>
 			
-		
-			{isSelected ? (
-				<div>
-        <Modal title="Success Message" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+  {isSelected ? (
+      <div>
+         <Modal title="Success Message" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
             <p>File is uploaded successfully !!!</p>
-          </Modal>
-				</div>
-			) : (
+         </Modal>
+     </div>
+) : (
         <Modal title="Error Message " visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-				<p>Please choose the file to upload !!!</p>
+	   <p>Please choose the file to upload !!!</p>
         </Modal>
 			   )
-      }
+   }
       </div>
-		</div>
+</div>
 	)
 }
 
