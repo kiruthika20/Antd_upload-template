@@ -47,7 +47,7 @@ return(
     <br></br>
       <Form
        {...layout}
-      name="basic"
+      name="Details"
       >
       <Form.Item
         label="Name"
